@@ -1,3 +1,4 @@
+
 const generateTeam = team => {
 
     const generateEngineer = engineer => {
@@ -55,15 +56,15 @@ const generateTeam = team => {
 const html = [];
 
 html.push(team
-    .filter(employee => employee.getTitle() === 'Engineer'))
+    .filter(employee => employee.getRole() === 'Engineer'))
     .map(engineer => generateEngineer(engineer)
     );
 html.push(team
-    .filter(employee => employee.getTitle() === 'Intern'))
+    .filter(employee => employee.getRole() === 'Intern'))
     .map(intern => generateIntern(intern)
     );
 html.push(team
-    .filter(employee => employee.getTitle() === 'Manager'))
+    .filter(employee => employee.getRole() === 'Manager'))
     .map(manager => generateManager(manager)
     );
  
